@@ -1,0 +1,125 @@
+<% var title = 'School System'; %>
+<% var description = ''; %>
+<% var jsfile = 'top'; %>
+<% include modules/_header %>
+    <!-- content -->
+    <div id="wrapper">
+        <main id="main">
+            <% include modules/_search %>
+            <div id="container">
+                <% include modules/_favarite %>
+                <!-- ここからコンテンツ -->
+                <div class="news">
+                    <h2 class="news__tit">お知らせ一覧</h2>
+                    <table class="news__table">
+                        <thead>
+                            <tr>
+                                <th>連絡日時</th>
+                                <th>通知者</th>
+                                <th>お知らせ内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">2019/12/31 99:99</a></td>
+                                <td>本部</td>
+                                <td>7/31 8:00-12:00はメンテナンスのためシステム停止となります。</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">2019/12/31 99:99</a></td>
+                                <td>本部</td>
+                                <td>7/31 8:00-12:00はメンテナンスのためシステム停止となります。</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">2019/12/31 99:99</a></td>
+                                <td>本部</td>
+                                <td>7/31 8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。8:00-12:00はメンテナンスのためシステム停止となります。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="noticelist">
+                    <h2 class="noticelist__tit">通知一覧</h2>
+                    <div class="noticelist__in">
+                        <div class="noticelist__select">
+                            <form action="" class="noticelist__selectfrm">
+                                <div class="noticelist__selectbox">
+                                    <select name="">
+                                        <option value="read">既読にする</option>
+                                        <option value="unread">未読にする</option>
+                                    </select>
+                                </div>
+                                <button type="submit">適用</button>
+                            </form>
+                        </div>
+                        <div class="noticelist__display">
+                            <label>
+                                <input type="checkbox" name="only_unread">
+                                <span>未読のみ表示</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" name="only_uncomplete">
+                                <span>未完了のみ表示</span>
+                            </label>
+                        </div>
+                    </div>
+                    <table class="noticelist__table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th>No.</th>
+                                <th>通知年月日</th>
+                                <th>種別</th>
+                                <th>顧客No.</th>
+                                <th>氏名</th>
+                                <th>内容</th>
+                                <th>未読/既読</th>
+                                <th>承認状況</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="">1</a></td>
+                                <td>2019/08/01</td>
+                                <td>問合せ</td>
+                                <td>12345678</td>
+                                <td>竹内 皓岳</td>
+                                <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+                                <td>未読</td>
+                                <td>未承認</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="">2</a></td>
+                                <td>2019/08/01</td>
+                                <td>問合せ</td>
+                                <td>12345678</td>
+                                <td>竹内 皓岳</td>
+                                <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+                                <td>未読</td>
+                                <td>未承認</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><a href="">3</a></td>
+                                <td>2019/08/01</td>
+                                <td>問合せ</td>
+                                <td>12345678</td>
+                                <td>竹内 皓岳</td>
+                                <td>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</td>
+                                <td>未読</td>
+                                <td>未承認</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ここまでコンテンツ -->
+            </div>
+            <% include modules/_footer %>
+        </main>
+        <% include modules/_nav %>
+    </div>
+    <!-- /content -->
+</body>
+</html>

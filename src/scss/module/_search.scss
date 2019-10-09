@@ -1,0 +1,56 @@
+#search {
+  display: flex;
+  align-items: center;
+  background: $sub-color;
+  padding: 10px 30px;
+  box-shadow: 0 2px 3px -3px rgba(0, 0, 0, 0.3);
+  .searchbox {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    &__tit {
+      color: $base-color;
+      font-weight: bold;
+      margin-right: 15px;
+    }
+    &__frm {
+      position: relative;
+      input {
+        width: 155px;
+        border-radius: 30px;
+        border: none;
+        padding: 6px 10px;
+      }
+    }
+    &__submit {
+      background: none;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      margin-top: -8px;
+      .fa-search {
+        color: #4b4b4b;
+      }
+    }
+  }
+  .infobox {
+    display: flex;
+    &__dl {
+      display: flex;
+      align-items: center;
+      dt {
+        color: #fff;
+        font-weight: bold;
+        background: $base-color;
+        padding: 1px 7px;
+        border-radius: 5px;
+        margin-right: 8px;
+      }
+      dd {
+        margin-right: 20px;
+      }
+    }
+  }
+}

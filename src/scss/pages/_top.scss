@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* ========================================
+
+top
+
+========================================= */
+
+.news {
+  margin-bottom: 50px;
+  &__tit {
+    font-size: 23px;
+    font-weight: normal;
+  }
+  &__table {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    thead {
+      tr {
+        th {
+          padding: 8px 8px 8px 20px;
+          text-align: left;
+          vertical-align: middle;
+          border-bottom: 1px solid #ddd;
+          font-weight: normal;
+          background: #fff;
+          word-break: break-all;
+          position: relative;
+          &:first-child {
+            width: 200px;
+          }
+          &:nth-child(2) {
+            width: 150px;
+          }
+        }
+        &:first-child {
+          th:first-child {
+            border-radius: 5px 0 0 0;
+          }
+          th:last-child {
+            border-radius: 0 5px 0 0;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 20px;
+          text-align: left;
+          vertical-align: baseline;
+          word-break: break-all;
+        }
+        &:nth-child(even) {
+          background: #f9f9f9;
+        }
+      }
+    }
+  }
+}
+
+.noticelist {
+  &__tit {
+    font-size: 23px;
+    font-weight: normal;
+  }
+  &__in {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  &__selectfrm {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    button[type="submit"] {
+      margin-left: 8px;
+      background: #fff;
+      padding: 4px 12px;
+      border-radius: 5px;
+      border: 1px solid $base-color;
+      color: $base-color;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background: $base-color;
+        color: #fff;
+      }
+    }
+  }
+  &__selectbox {
+    position: relative;
+    select {
+      width: 175px;
+      padding: 5px 7px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      background-image: none;
+      box-shadow: none;
+      appearance: none;
+      &::-ms-expand {
+        display: none;
+      }
+    }
+    &::after {
+      position: absolute;
+      top: 0.9em;
+      right: 0.5em;
+      width: 0;
+      height: 0;
+      padding: 0;
+      content: "";
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 9px solid $base-color;
+      pointer-events: none;
+    }
+  }
+  &__display {
+    label {
+      cursor: pointer;
+      margin-left: 15px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  &__table {
+    margin-top: 15px;
+    width: 100%;
+    border-radius: 5px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+    background: #fff;
+    thead {
+      tr {
+        th {
+          position: relative;
+          padding: 8px 8px 8px 20px;
+          text-align: left;
+          vertical-align: middle;
+          border-bottom: 1px solid #ddd;
+          font-weight: normal;
+          word-break: break-all;
+          input[type="checkbox"] {
+            cursor: pointer;
+          }
+          &:first-child {
+            width: 40px;
+          }
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6) {
+            width: 130px;
+          }
+          &:nth-child(7) {
+            width: auto;
+          }
+          &:nth-child(8),
+          &:nth-child(9) {
+            width: 100px;
+          }
+        }
+        &:first-child {
+          th:first-child {
+            border-radius: 5px 0 0 0;
+          }
+          th:last-child {
+            border-radius: 0 5px 0 0;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 20px;
+          text-align: left;
+          vertical-align: baseline;
+          word-break: break-all;
+          input[type="checkbox"] {
+            cursor: pointer;
+          }
+        }
+        &:nth-child(even) {
+          background: #f9f9f9;
+        }
+        &:nth-child(odd) {
+          background: #fff;
+        }
+      }
+      &:last-child {
+        td:first-child {
+          border-radius: 0 0 0 5px;
+        }
+        td:last-child {
+          border-radius: 0 0 5px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.favaritemenu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  &__tit {
+    margin-right: 15px;
+  }
+  &__nav {
+    display: flex;
+    li {
+      margin-right: 8px;
+      a {
+        background: #fff;
+        text-decoration: none;
+        color: $base-color;
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: block;
+        font-weight: bold;
+        border: 2px solid #adadad;
+        &:hover {
+          background: $sub-color;
+          border-color: $base-color;
+        }
+      }
+    }
+  }
+}
