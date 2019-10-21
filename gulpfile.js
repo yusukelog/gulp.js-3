@@ -14,7 +14,7 @@ const browserSync = require("browser-sync"); //自動リロード
 const del = require("del"); //削除
 const imagemin = require("gulp-imagemin"); //画像圧縮
 const changed = require("gulp-changed"); //変更のあったもの(画像)
-const pngquant = require("imagemin-pngquant"); //png圧縮
+//const pngquant = require("imagemin-pngquant"); //png圧縮
 const mozjpeg = require("imagemin-mozjpeg"); //jpg圧縮
 const prettierPlugin = require("gulp-prettier-plugin"); //コードフォーマット
 const webpackStream = require("webpack-stream"); //webpack-stream
@@ -36,7 +36,7 @@ gulp.task("sass", () => {
       plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
     )
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(
       autoprefixer({
         grid: true
@@ -82,7 +82,7 @@ gulp.task("imagemin", () => {
     .pipe(changed(dstGlob))
     .pipe(
       imagemin([
-        pngquant({ quality: "65-80", speed: 1 }),
+        //pngquant({ quality: "65-80", speed: 1 }),
         mozjpeg({ quality: 80 }),
         imagemin.svgo(),
         imagemin.gifsicle()
@@ -122,7 +122,7 @@ gulp.task("webpack", () => {
 // コードフォーマット
 gulp.task("prettier", () => {
   return gulp
-    .src([paths.src + "/scss/**/*.scss", paths.src + "/js/**/*.js",paths.dist + "/assets/**/*.html"])
+    .src([paths.src + "/scss/**/*.scss", paths.src + "/js/**/*.js", paths.dist + "/**/*.html"])
     .pipe(prettierPlugin(undefined, { filter: true }))
     .pipe(gulp.dest(file => file.base));
 });
@@ -149,7 +149,7 @@ gulp.task("watch", done => {
     paths.src + "/js/**/*.js",
     gulp.series("webpack", "prettier", "reload")
   );
-  gulp.watch(paths.src + "/ejs/**/*.ejs", gulp.series("ejs", "reload"));
+  gulp.watch(paths.src + "/ejs/**/*.ejs", gulp.series("ejs", "prettier", "reload"));
   done();
 });
 
@@ -158,10 +158,10 @@ gulp.task("default", gulp.parallel("watch", "browser-sync"));
 
 // build
 gulp.task("build",
-    gulp.series("clean",
-        gulp.series("imagemin",
-            gulp.series("sass",
-                gulp.series("webpack",
-                    gulp.series("ejs",
-                      gulp.series("prettier"))))))
+  gulp.series("clean",
+    gulp.series("imagemin",
+      gulp.series("sass",
+        gulp.series("webpack",
+          gulp.series("ejs",
+            gulp.series("prettier"))))))
 );
